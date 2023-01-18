@@ -1,0 +1,61 @@
+.header {
+	@include container;
+	flex-direction: column;
+	align-content: center;
+	padding-top: 140px;
+
+	&__title {
+		font-family: "Forum";
+		font-size: 80px;
+		line-height: 90px;
+		letter-spacing: 5px;
+		color: #9d8665;
+	}
+
+	&__underline {
+		margin-top: 25px;
+		min-width: 330px;
+		width: 100%;
+		height: 3px;
+		background-color: #710707;
+	}
+}
+
+//media
+
+.header {
+	@media screen and (max-width: 1024px) {
+		width: 95%;
+		padding-top: 70px;
+		max-width: 984px;
+
+		&__title {
+			font-size: 50px;
+			line-height: 75px;
+		}
+
+		&__underline {
+			margin-top: 20px;
+		}
+	}
+	@media screen and (max-width: 768px) {
+		width: 95%;
+		padding-top: 60px;
+		max-width: 728px;
+
+		&__title {
+			font-size: 40px;
+			line-height: 60px;
+		}
+	}
+	@media screen and (max-width: 420px) {
+		width: 95%;
+		padding-top: 42px;
+		max-width: 380px;
+
+		&__title {
+			font-size: 28px;
+			line-height: 40px;
+		}
+	}
+}

@@ -1,0 +1,118 @@
+.card {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	padding-top: 75px;
+
+	&__image {
+		max-width: 440px;
+	}
+
+	&__title {
+		position: relative;
+		font-family: "Forum";
+		font-size: 32px;
+		line-height: 35px;
+		letter-spacing: 5px;
+		padding-top: 15px;
+		padding-bottom: 12px;
+		text-transform: uppercase;
+		&::before {
+			content: "";
+			position: absolute;
+			width: 300px;
+			height: 2px;
+			background-color: #710707;
+			bottom: 0;
+		}
+	}
+
+	&__virtual {
+		text-decoration: none;
+		font-family: "Roboto";
+		font-size: 22px;
+		line-height: 26px;
+		color: #000000;
+		transition: 0.3s;
+	}
+
+	&__view {
+		text-decoration: none;
+		font-family: "Roboto";
+		font-size: 18px;
+		line-height: 21px;
+		color: #000000;
+		transition: 0.3s;
+	}
+
+	&__virtual:hover,
+	&__view:hover {
+		color: #9d8665;
+	}
+
+	&__virtual:active,
+	&__view:active {
+		color: #7e6c51;
+	}
+}
+
+//media
+
+.card {
+	@media screen and (max-width: 1024px) {
+		padding-top: 60px;
+
+		&__image {
+			max-width: 330px;
+		}
+
+		&__title {
+			font-size: 28px;
+			line-height: 31px;
+			letter-spacing: 3px;
+			&::before {
+				width: 150px;
+				height: 2px;
+			}
+		}
+
+		&__virtual {
+			font-size: 20px;
+			line-height: 23px;
+		}
+
+		&__view {
+			font-size: 16px;
+			line-height: 19px;
+		}
+	}
+	@media screen and (max-width: 768px) {
+		padding-top: 40px;
+
+		&__image {
+			max-width: 280px;
+		}
+
+		&__title {
+			font-size: 22px;
+			line-height: 24px;
+		}
+
+		&__virtual {
+			font-size: 18px;
+			line-height: 21px;
+		}
+	}
+	@media screen and (max-width: 420px) {
+		&__title {
+			font-size: 18px;
+			line-height: 20px;
+			letter-spacing: 5px;
+		}
+
+		&__virtual {
+			font-size: 16px;
+			line-height: 19px;
+		}
+	}
+}
